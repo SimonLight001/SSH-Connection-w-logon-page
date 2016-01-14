@@ -1,0 +1,36 @@
+<html>
+  <head>
+    <title>Test web page</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <style>
+      #Shutdown{
+        color: red;
+      }
+      #Restart{
+        color: red;
+      }
+
+    </style>
+    <script>
+    $(document).ready(function(){
+      $('#Shutdown').click(function() {
+      if(confirm("Are you sure you want to shutdown?"))
+      {
+        alert("Shutting Down Now!");
+      }
+      });
+      $('#Restart').click(function(){
+      if(confirm("Are you sure you want to restart?"))
+      {
+        alert("Restarting Now!");
+      }
+      })
+    });
+    </script>
+  </head>
+  <body>
+
+    <input type="submit" value="Shutdown Server" id="Shutdown">
+    <input type="submit" value="Restart Server" id="Restart">
+  </body>
+</html>
